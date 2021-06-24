@@ -127,7 +127,7 @@ void Control( int, void* ) {
 
 int main() {
 
-	cv::VideoCapture input("NIR_1.mp4");
+	cv::VideoCapture input("video.mp4");
 		
 	std::vector<std::vector<cv::Point> > contours;
 	std::vector<cv::Vec4i> hierarchy;
@@ -224,19 +224,15 @@ int main() {
 	   	if (runbutton) 
 	   		break;
 		
-		//char c = cv::waitKey(0);
-		
-		//if (c = 27)  //27 is ESC code
-		//	break;
 
 		int keyboard = waitKey(30);
-        if (keyboard == 'q' || keyboard == 27)
-            break;
+      		if (keyboard == 'q' || keyboard == 27)
+          		break;
 			
 	}
 	
 
-	cv::VideoCapture video("NIR_1.mp4");
+	cv::VideoCapture video("video.mp4");
 	
 	cv::destroyAllWindows();
 	
@@ -393,8 +389,8 @@ int main() {
 		imshow("Contours", imageROI);
 
 		int keyboard = waitKey(30);
-        if (keyboard == 'q' || keyboard == 27)
-            break;
+        	if (keyboard == 'q' || keyboard == 27)
+           		break;
 
 	}
 	
